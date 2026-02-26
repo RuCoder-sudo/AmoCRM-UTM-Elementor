@@ -5,7 +5,7 @@ use Elementor\Core\DynamicTags\Tag;
 
 class UTM_Dynamic_Tag extends Tag {
     public function get_name() { return 'utm_cookie'; }
-    public function get_title() { return __('UTM (Cookie)', 'utm-elementor-helper'); }
+    public function get_title() { return __('UTM (Cookie)', 'utm-elementor'); }
     public function get_group() { return 'site'; } 
     public function get_categories() {
         return [ \Elementor\Modules\DynamicTags\Module::TEXT_CATEGORY ];
@@ -13,13 +13,13 @@ class UTM_Dynamic_Tag extends Tag {
 
     protected function register_controls() {
         $this->add_control('scope', [
-            'label'   => __('Scope', 'utm-elementor-helper'),
+            'label'   => __('Scope', 'utm-elementor'),
             'type'    => \Elementor\Controls_Manager::SELECT,
             'default' => 'last',
             'options' => ['last' => 'Last touch', 'first' => 'First touch'],
         ]);
         $this->add_control('key', [
-            'label'   => __('Key', 'utm-elementor-helper'),
+            'label'   => __('Key', 'utm-elementor'),
             'type'    => \Elementor\Controls_Manager::SELECT,
             'options' => [
                 'utm_source' => 'utm_source',
@@ -39,7 +39,7 @@ class UTM_Dynamic_Tag extends Tag {
             'default' => 'utm_source',
         ]);
         $this->add_control('fallback', [
-            'label'   => __('Fallback', 'utm-elementor-helper'),
+            'label'   => __('Fallback', 'utm-elementor'),
             'type'    => \Elementor\Controls_Manager::TEXT,
             'default' => '',
         ]);
